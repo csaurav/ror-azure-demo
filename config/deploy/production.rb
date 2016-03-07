@@ -7,8 +7,8 @@ set :branch, "master"
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
 # specify server DNS name, user & roles
-ask(:password, nil, echo:false) 
-  server 'vm-1-372ezf46.cloudapp.net', user: 'saurav', port: 22, password: fetch(:password), roles: %w{web app db}, primary: true
+ask(:password, nil) 
+  server 'vm-1-372ezf46.cloudapp.net', user: 'saurav', port: 22, password: fetch(:password), roles: %w{web app db}
 
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 
