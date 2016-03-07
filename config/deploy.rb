@@ -2,11 +2,11 @@
 # http://www.talkingquickly.co.uk/2014/01/deploying-rails-apps-to-a-vps-with-capistrano-v3/
 
 set :application, 'ror-azure-demo'
-set :deploy_user, 'azureuser'
+set :deploy_user, 'saurav'
 
 # setup repo details
 set :scm, :git
-set :repo_url, 'https://github.com/m-gagne/ror-azure-demo.git'
+set :repo_url, 'https://github.com/csaurav/ror-azure-demo.git'
 
 # setup rvm.
 set :rbenv_type, :user
@@ -34,7 +34,7 @@ set :tests, []
 set(:config_files, %w(
   nginx.conf
   application.yml
-  database.example.yml
+  database.yml
   log_rotation
   monit
   unicorn.rb
